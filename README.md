@@ -1,6 +1,6 @@
 # Casos de Estudio - Parcial UB
 
-Repositorio oficial que contiene la solución estructurada y completa de los casos de estudio y talleres prácticos requeridos para el primer parcial. Cada caso se encuentra organizado en su respectiva carpeta e incluye:
+Repositorio oficial que contiene la solución estructurada y completa de los casos de estudio y el taller práctico requeridos para el primer parcial. Cada caso se encuentra organizado en su respectiva carpeta e incluye:
 * **Análisis detallado** (Entradas, Procesos, Salidas, Variables).
 * **Pseudocódigo estructurado**.
 * **Diagramas lógicos / de flujo**.
