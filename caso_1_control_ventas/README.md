@@ -100,7 +100,7 @@ flowchart TD
 
 ---
 
-## Actividad D: Código en Python (UI Mejorada)
+## Actividad D: Código en Python.
 
 ```python
 print("==================================================")
