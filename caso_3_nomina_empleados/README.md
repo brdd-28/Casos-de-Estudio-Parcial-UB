@@ -109,7 +109,7 @@ flowchart TD
 
 ---
 
-## 5. Código en Python (UI Mejorada)
+## 5. Código en Python.
 
 ```python
 print("==================================================")
