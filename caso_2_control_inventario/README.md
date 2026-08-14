@@ -64,7 +64,7 @@ Fin
 
 ---
 
-## Actividad 3: Código en Python (UI Mejorada)
+## Actividad 3: Código en Python.
 
 ```python
 print("==================================================")
