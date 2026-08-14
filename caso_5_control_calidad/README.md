@@ -128,7 +128,7 @@ print("==================================================")
 print(f" Total de productos inspeccionados : {total_inspeccionados}")
 print(f" Total de productos aprobados      : {total_aprobados}")
 print(f" Total de productos defectuosos    : {total_defectuosos}")
-print(f" Porcentaje de defectuosos         : {porcentaje_defectuosos:.2f}%")
+print(f" Porcentaje de defectuosos         : {porcentaje_defectuosos}%")
 print("-" * 50)
 
 # Evaluación de estado / alerta

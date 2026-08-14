@@ -90,8 +90,8 @@ else:
 print("\n" + "=" * 50)
 print("             RESULTADOS FINALES                   ")
 print("==================================================")
-print(f" Total general de ventas : ${total:,.2f}")
-print(f" Promedio de ventas      : ${promedio:,.2f}")
+print(f" Total general de ventas : ${total}")
+print(f" Promedio de ventas      : ${promedio}")
 print("==================================================")
 ```
 

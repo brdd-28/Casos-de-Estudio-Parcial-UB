@@ -64,7 +64,7 @@ Fin
 
 ---
 
-## Actividad 3: Código en Python.
+## Actividad 3: Código en Python (UI Mejorada)
 
 ```python
 print("==================================================")
@@ -103,7 +103,7 @@ print("\n" + "=" * 50)
 print("           INFORME DE CONTROL DE INVENTARIO       ")
 print("==================================================")
 print(f" Total de unidades registradas    : {total_unidades}")
-print(f" Promedio de unidades por día     : {promedio:,.2f}")
+print(f" Promedio de unidades por día     : {promedio}")
 print(f" Día con mayor stock              : Día {dia_mayor} ({mayor_cantidad} unidades)")
 print(f" Días con inventario menor a 20   : {cont_inferior_20}")
 print("==================================================")

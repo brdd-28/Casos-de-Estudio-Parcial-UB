@@ -1,6 +1,14 @@
-print("==================================================")
-print("      SISTEMA DE CONTROL DE INVENTARIO (7 DÍAS)   ")
-print("==================================================\n")
+CYAN = "\033[96m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+BLUE = "\033[94m"
+BOLD = "\033[1m"
+RESET = "\033[0m"
+
+print(f"{CYAN}{'=' * 50}{RESET}")
+print(f"{BOLD}{BLUE}      SISTEMA DE CONTROL DE INVENTARIO (7 DÍAS)   {RESET}")
+print(f"{CYAN}{'=' * 50}{RESET}\n")
 
 total_unidades = 0
 cont_inferior_20 = 0
@@ -8,7 +16,7 @@ mayor_cantidad = 0
 dia_mayor = 0
 
 for dia in range(1, 8):
-    cantidad = int(input(f"Ingrese la cantidad de productos disponibles el día {dia}: "))
+    cantidad = int(input(f"{YELLOW}Ingrese la cantidad de productos disponibles el día {dia}: {RESET}"))
     
     # Acumular total
     total_unidades = total_unidades + cantidad
@@ -24,17 +32,17 @@ for dia in range(1, 8):
         
     # Generar alerta si inventario < 10
     if cantidad < 10:
-        print(f" >> ALERTA: Stock crítico el día {dia} ({cantidad} unidades)")
+        print(f" {RED}>> ALERTA: Stock crítico el día {dia} ({cantidad} unidades){RESET}")
 
 # Calcular promedio
 promedio = total_unidades / 7
 
 # Mostrar resultados
-print("\n" + "=" * 50)
-print("           INFORME DE CONTROL DE INVENTARIO       ")
-print("==================================================")
-print(f" Total de unidades registradas    : {total_unidades}")
-print(f" Promedio de unidades por día     : {promedio:,.2f}")
-print(f" Día con mayor stock              : Día {dia_mayor} ({mayor_cantidad} unidades)")
-print(f" Días con inventario menor a 20   : {cont_inferior_20}")
-print("==================================================")
+print(f"\n{CYAN}{'=' * 50}{RESET}")
+print(f"{BOLD}{BLUE}           INFORME DE CONTROL DE INVENTARIO       {RESET}")
+print(f"{CYAN}{'=' * 50}{RESET}")
+print(f" Total de unidades registradas    : {GREEN}{total_unidades}{RESET}")
+print(f" Promedio de unidades por día     : {GREEN}{promedio:,.2f}{RESET}")
+print(f" Día con mayor stock              : {GREEN}Día {dia_mayor} ({mayor_cantidad} unidades){RESET}")
+print(f" Días con inventario menor a 20   : {YELLOW}{cont_inferior_20}{RESET}")
+print(f"{CYAN}{'=' * 50}{RESET}")

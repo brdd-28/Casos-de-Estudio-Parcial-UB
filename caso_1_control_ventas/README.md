@@ -100,7 +100,7 @@ flowchart TD
 
 ---
 
-## Actividad D: Código en Python.
+## Actividad D: Código en Python (UI Mejorada)
 
 ```python
 print("==================================================")
@@ -138,10 +138,10 @@ else:
 print("\n" + "=" * 50)
 print("           RESULTADOS FINALES DE VENTAS           ")
 print("==================================================")
-print(f" Total de ventas            : ${total_ventas:,.2f}")
-print(f" Promedio de ventas         : ${promedio:,.2f}")
+print(f" Total de ventas            : ${total_ventas}")
+print(f" Promedio de ventas         : ${promedio}")
 print(f" Empleados que superan meta : {cont_meta}")
-print(f" Venta más alta             : ${venta_mayor:,.2f}")
+print(f" Venta más alta             : ${venta_mayor}")
 print("==================================================")
 ```
 

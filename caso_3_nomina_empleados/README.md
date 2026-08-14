@@ -109,7 +109,7 @@ flowchart TD
 
 ---
 
-## 5. Código en Python.
+## 5. Código en Python (UI Mejorada)
 
 ```python
 print("==================================================")
@@ -150,15 +150,15 @@ for i in range(1, n + 1):
     print("-" * 50)
     print(f" Horas normales trabajadas : {horas_normales}")
     print(f" Horas extras realizadas   : {horas_extras}")
-    print(f" Pago por horas normales   : ${salario_normal:,.2f}")
-    print(f" Pago por horas extras     : ${pago_extras:,.2f}")
-    print(f" Salario total a pagar     : ${salario_total:,.2f}")
+    print(f" Pago por horas normales   : ${salario_normal}")
+    print(f" Pago por horas extras     : ${pago_extras}")
+    print(f" Salario total a pagar     : ${salario_total}")
     print("-" * 50)
 
 print("\n" + "=" * 50)
 print("              RESUMEN FINANCIERO EMPRESA          ")
 print("==================================================")
-print(f" Total pagado por la empresa : ${total_empresa:,.2f}")
+print(f" Total pagado por la empresa : ${total_empresa}")
 print("==================================================")
 ```
 
