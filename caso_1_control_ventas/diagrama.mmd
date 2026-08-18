@@ -1,0 +1,17 @@
+flowchart TD
+	A[Inicio] --> B[Leer n]
+	B --> C[Inicializar acumuladores]
+	C --> D[Para i=1..n]
+	D --> E[Leer venta]
+	E --> F[Acumular total]
+	F --> G{venta > 1000000}
+	G -- Sí --> H[cont_meta++]
+	G -- No --> I[--]
+	H --> J{venta > venta_mayor}
+	I --> J
+	J -- Sí --> K[venta_mayor = venta]
+	J -- No --> L[--]
+	L --> M[Fin Para]
+	M --> N[Calcular promedio]
+	N --> O[Mostrar resultados]
+	O --> P[Fin]

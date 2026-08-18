@@ -1,3 +1,40 @@
+# Caso 6 - Taller práctico
+
+## Conversión del pseudocódigo
+El pseudocódigo proporcionado fue convertido a Python en `taller_practico.py`.
+
+## Pseudocódigo (original)
+Inicio
+  Leer cantidad
+  total = 0
+  Para contador = 1 hasta cantidad
+    Leer venta
+    total = total + venta
+    Si venta >= 1000000 Entonces Mostrar "Meta alcanzada" Sino Mostrar "Meta no alcanzada" FinSi
+  FinPara
+  promedio = total / cantidad
+  Mostrar total, promedio
+Fin
+
+## Diagrama de flujo (Mermaid)
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Leer cantidad]
+  B --> C[Inicializar total=0]
+  C --> D[Para contador=1..cantidad]
+  D --> E[Leer venta]
+  E --> F[total += venta]
+  F --> G{venta >= 1000000}
+  G -- Sí --> H[Mostrar Meta alcanzada]
+  G -- No --> I[Mostrar Meta no alcanzada]
+  H --> J[Fin Para]
+  I --> J
+  J --> K[Calcular promedio y Mostrar]
+  K --> L[Fin]
+```
+
+## Código
+El código Python está en `taller_practico.py`.
 # Caso de estudio 6: Taller práctico de codificación
 
 > Conversión de pseudocódigo secuencial e iterativo a código Python ejecutable con validación de metas de ventas, con consola optimizada.

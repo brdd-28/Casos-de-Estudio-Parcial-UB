@@ -1,0 +1,13 @@
+flowchart TD
+	A[Inicio] --> B[Leer n]
+	B --> C[Para i=1..n]
+	C --> D[Leer nombre, horas, valor_hora]
+	D --> E{horas<=40}
+	E -- Sí --> F[horas_normales=horas; horas_extras=0]
+	E -- No --> G[horas_normales=40; horas_extras=horas-40]
+	F --> H[Calcular pagos]
+	G --> H
+	H --> I[Acumular total_empresa y Mostrar empleado]
+	I --> J[Fin Para]
+	J --> K[Mostrar total_empresa]
+	K --> L[Fin]

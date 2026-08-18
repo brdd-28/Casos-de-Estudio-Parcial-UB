@@ -1,3 +1,47 @@
+# Caso 4 - Atención al cliente
+
+## Análisis
+- Entradas: cantidad de clientes atendidos por 5 trabajadores
+- Procesos: acumular total, calcular promedio, identificar trabajador con mayor atenciones, contar >30 y <15
+- Salidas: total clientes, promedio, trabajador con mayor atención, conteos >30 y <15
+- Variables: `clientes`, `total_clientes`, `mayor_atenciones`, `trabajador_estrella`, `cont_mas_30`, `cont_menos_15`
+
+## Pseudocódigo
+Inicio
+  total_clientes = 0
+  Para i = 1 Hasta 5
+    Leer clientes
+    total_clientes = total_clientes + clientes
+    Si i==1 O clientes > mayor_atenciones Entonces actualizar mayor y trabajador_estrella
+    Si clientes > 30 Entonces cont_mas_30++ SinoSi clientes < 15 Entonces cont_menos_15++ FinSi
+  FinPara
+  promedio = total_clientes / 5
+  Mostrar resultados
+Fin
+
+## Diagrama de flujo (Mermaid)
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Inicializar contadores]
+  B --> C[Para i=1..5]
+  C --> D[Leer clientes]
+  D --> E[total_clientes += clientes]
+  E --> F{clientes > mayor_atenciones}
+  F -- Sí --> G[Actualizar mayor/trabajador]
+  F -- No --> H[--]
+  G --> I{clientes>30}
+  H --> I
+  I -- Sí --> J[cont_mas_30++]
+  I -- No --> K{clientes<15}
+  K -- Sí --> L[cont_menos_15++]
+  K -- No --> M[--]
+  M --> N[Fin Para]
+  N --> O[Calcular promedio y Mostrar]
+  O --> P[Fin]
+```
+
+## Código
+El código Python está en `atencion_cliente.py`.
 # Caso de estudio 4: Atención al cliente
 
 > Registro y análisis de atención al cliente de 5 trabajadores utilizando simultáneamente variables, estructuras condicionales `SI-SINO`, bucles `PARA`, contadores y acumuladores, con consola optimizada.

@@ -1,0 +1,17 @@
+flowchart TD
+	A[Inicio] --> B[Inicializar contadores]
+	B --> C[Para i=1..5]
+	C --> D[Leer clientes]
+	D --> E[total_clientes += clientes]
+	E --> F{clientes > mayor_atenciones}
+	F -- Sí --> G[Actualizar mayor/trabajador]
+	F -- No --> H[--]
+	G --> I{clientes>30}
+	H --> I
+	I -- Sí --> J[cont_mas_30++]
+	I -- No --> K{clientes<15}
+	K -- Sí --> L[cont_menos_15++]
+	K -- No --> M[--]
+	M --> N[Fin Para]
+	N --> O[Calcular promedio y Mostrar]
+	O --> P[Fin]

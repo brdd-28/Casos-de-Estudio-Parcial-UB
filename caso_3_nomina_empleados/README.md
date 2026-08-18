@@ -1,3 +1,60 @@
+# Caso 3 - Nómina de empleados
+
+## Análisis
+- Entradas: nombre, horas trabajadas, valor hora para cada empleado
+- Procesos: calcular horas normales (hasta 40) y horas extras (>40) con recargo 25%, calcular salario normal, pago horas extras y salario total; acumular total pagado por la empresa
+- Salidas: salario normal, pago horas extras, salario total por empleado y total pagado por la empresa
+- Variables: `nombre`, `horas_trabajadas`, `valor_hora`, `horas_normales`, `horas_extras`, `salario_normal`, `pago_extras`, `salario_total`, `total_empresa`
+
+## Pseudocódigo
+Inicio
+  Leer n
+  total_empresa = 0
+  Para i = 1 Hasta n
+    Leer nombre, horas_trabajadas, valor_hora
+    Si horas_trabajadas <= 40 Entonces
+      horas_normales = horas_trabajadas
+      horas_extras = 0
+    Sino
+      horas_normales = 40
+      horas_extras = horas_trabajadas - 40
+    FinSi
+    salario_normal = horas_normales * valor_hora
+    pago_extras = horas_extras * (valor_hora * 1.25)
+    salario_total = salario_normal + pago_extras
+    total_empresa = total_empresa + salario_total
+    Mostrar resultados del empleado
+  FinPara
+  Mostrar total_empresa
+Fin
+
+## Diagrama de flujo (Mermaid)
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Leer n]
+  B --> C[Para i=1..n]
+  C --> D[Leer nombre, horas, valor_hora]
+  D --> E{horas<=40}
+  E -- Sí --> F[horas_normales=horas; horas_extras=0]
+  E -- No --> G[horas_normales=40; horas_extras=horas-40]
+  F --> H[Calcular pagos]
+  G --> H
+  H --> I[Acumular total_empresa y Mostrar empleado]
+  I --> J[Fin Para]
+  J --> K[Mostrar total_empresa]
+  K --> L[Fin]
+```
+
+## Prueba de escritorio (Ejemplo Ana)
+- Horas: 45, Valor hora: 10000
+- Horas normales = 40
+- Horas extras = 5
+- Pago horas normales = 400000
+- Pago horas extras = 62500
+- Salario total = 462500
+
+## Código
+El código Python está en `nomina_empleados.py`.
 # Caso de estudio 3: Nómina de empleados
 
 > Cálculo de salario semanal para varios empleados, considerando horas normales y horas extras (con un recargo del 25% si superan las 40 horas), mostrando desgloses individuales y el total pagado por la organización, con consola optimizada.

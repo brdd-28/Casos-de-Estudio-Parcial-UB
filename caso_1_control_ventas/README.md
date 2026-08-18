@@ -1,3 +1,57 @@
+# Caso 1 - Control de ventas
+
+## A. Análisis
+- Entradas: número de empleados, valor de ventas por empleado (numérico)
+- Procesos: acumular ventas, contar empleados que superan meta, obtener venta máxima, calcular promedio
+- Salidas: total de ventas, promedio, cantidad que superó meta, venta más alta
+- Variables: `n`, `venta`, `total_ventas`, `promedio`, `cont_meta`, `venta_mayor`
+
+## B. Pseudocódigo
+Inicio
+  Leer n
+  total_ventas = 0
+  cont_meta = 0
+  venta_mayor = 0
+  Para i = 1 Hasta n
+    Leer venta
+    total_ventas = total_ventas + venta
+    Si venta > 1000000 Entonces cont_meta = cont_meta + 1 FinSi
+    Si i == 1 O venta > venta_mayor Entonces venta_mayor = venta FinSi
+  FinPara
+  promedio = total_ventas / n
+  Mostrar total_ventas, promedio, cont_meta, venta_mayor
+Fin
+
+## C. Diagrama de flujo (Mermaid)
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Leer n]
+  B --> C[Inicializar acumuladores]
+  C --> D[Para i=1..n]
+  D --> E[Leer venta]
+  E --> F[Acumular total]
+  F --> G{venta > 1000000}
+  G -- Sí --> H[cont_meta++]
+  G -- No --> I[--]
+  H --> J{venta > venta_mayor}
+  I --> J
+  J -- Sí --> K[venta_mayor = venta]
+  J -- No --> L[--]
+  L --> M[Fin Para]
+  M --> N[Calcular promedio]
+  N --> O[Mostrar resultados]
+  O --> P[Fin]
+```
+
+## D. Código
+El código Python está en `control_ventas.py`.
+
+## E. Prueba de escritorio (5 empleados)
+- Datos: 850000, 1200000, 950000, 1500000, 1100000
+- Total = 5.600.000
+- Promedio = 1.120.000
+- Empleados que superan $1.000.000 = 3
+- Venta más alta = 1.500.000
 # Caso de estudio 1: Control de ventas
 
 > Algoritmo para solicitar el número de empleados y sus ventas semanales, calculando el total, promedio, cantidad de empleados que superan la meta de $1.000.000 y la venta más alta, con una interfaz de consola optimizada.

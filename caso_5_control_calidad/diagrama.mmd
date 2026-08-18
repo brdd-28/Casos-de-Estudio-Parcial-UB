@@ -1,0 +1,15 @@
+flowchart TD
+	A[Inicio] --> B[Inicializar contadores]
+	B --> C[Para i=1..10]
+	C --> D[Leer codigo, resultado]
+	D --> E{resultado==1}
+	E -- Sí --> F[total_aprobados++]
+	E -- No --> G[total_defectuosos++]
+	F --> H[Fin Para]
+	G --> H
+	H --> I[Calcular porcentaje]
+	I --> J{porcentaje>10}
+	J -- Sí --> K[Mostrar ALERTA]
+	J -- No --> L[Mostrar dentro del nivel]
+	K --> M[Fin]
+	L --> M

@@ -1,3 +1,44 @@
+# Caso 5 - Control de calidad
+
+## Análisis
+- Entradas: código del producto y resultado de inspección (1=aprobado, 0=defectuoso) para 10 productos
+- Procesos: contar aprobados y defectuosos, calcular porcentaje de defectuosos y evaluar alerta si >10%
+- Salidas: total inspeccionados, aprobados, defectuosos, porcentaje, mensaje de alerta o normal
+- Variables: `codigo`, `resultado`, `total_aprobados`, `total_defectuosos`, `total_inspeccionados`, `porcentaje_defectuosos`
+
+## Pseudocódigo
+Inicio
+  total_aprobados = 0
+  total_defectuosos = 0
+  Para i = 1 Hasta 10
+    Leer codigo, resultado
+    Si resultado == 1 Entonces total_aprobados++ Sino total_defectuosos++ FinSi
+  FinPara
+  porcentaje_defectuosos = (total_defectuosos / 10) * 100
+  Si porcentaje_defectuosos > 10 Entonces Mostrar ALERTA Sino Mostrar proceso dentro de nivel permitido FinSi
+Fin
+
+## Diagrama de flujo (Mermaid)
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Inicializar contadores]
+  B --> C[Para i=1..10]
+  C --> D[Leer codigo, resultado]
+  D --> E{resultado==1}
+  E -- Sí --> F[total_aprobados++]
+  E -- No --> G[total_defectuosos++]
+  F --> H[Fin Para]
+  G --> H
+  H --> I[Calcular porcentaje]
+  I --> J{porcentaje>10}
+  J -- Sí --> K[Mostrar ALERTA]
+  J -- No --> L[Mostrar dentro del nivel]
+  K --> M[Fin]
+  L --> M
+```
+
+## Código
+El código Python está en `control_calidad.py`.
 # Caso de estudio 5: Control de calidad
 
 > Inspección de 10 productos fabricados (1 = aprobado, 0 = defectuoso) determinando totales, porcentajes de defectos y generando alertas críticas si el porcentaje supera el 10%, con consola optimizada.

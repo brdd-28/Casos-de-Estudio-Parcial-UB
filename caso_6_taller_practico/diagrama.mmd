@@ -1,0 +1,13 @@
+flowchart TD
+	A[Inicio] --> B[Leer cantidad]
+	B --> C[Inicializar total=0]
+	C --> D[Para contador=1..cantidad]
+	D --> E[Leer venta]
+	E --> F[total += venta]
+	F --> G{venta >= 1000000}
+	G -- Sí --> H[Mostrar Meta alcanzada]
+	G -- No --> I[Mostrar Meta no alcanzada]
+	H --> J[Fin Para]
+	I --> J
+	J --> K[Calcular promedio y Mostrar]
+	K --> L[Fin]
